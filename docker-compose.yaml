@@ -1,0 +1,10 @@
+  lora-python-transmitter:
+    container_name: lora-python-transmitter
+    image: deepakdpk6/lora-docker-raspi
+    restart: unless-stopped
+    environment:
+      - TZ=America/Chicago
+      - PYTHONUNBUFFERED=1
+    devices:
+      # Make sure this matched your adapter location
+      - /dev/ttyS0:/dev/ttyS0
